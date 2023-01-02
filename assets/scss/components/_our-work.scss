@@ -1,0 +1,193 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/common' as *;
+
+/*
+************
+*************************
+07. our-work
+******************************************************* 
+*************************************************************** */
+
+// ---------- our-work --------------
+
+.our-work-custom-width {
+    max-width: 1440px;
+    margin: auto;
+    overflow: hidden;
+    @media #{$xxl} {
+        max-width: 1300px;
+    }
+    @media #{$xl} {
+        max-width: 1170px;
+    }
+    @media #{$lg} {
+        max-width: 930px;
+    }
+    @media #{$md} {
+        max-width: 690px;
+    }
+    @media #{$xs} {
+        max-width: 100%;
+        margin: 0 15px;
+    }
+    @media #{$sm} {
+        max-width: 510px;
+        margin: auto;
+    }
+}
+.artza-our-work-area {
+    position: relative;
+}
+.artza-our-work-bg-shape-wrapper {
+    position: absolute;
+    right: 35px;
+    top: 0;
+    z-index: -1;
+}
+.our-work-container {
+    max-width: 1440px;
+    overflow: hidden;
+}
+.artza-our-work-title-wrapper{
+    position: relative;
+}
+.artza-work-title-bg-shape-1 {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 45px;
+    @media #{$xs} {
+        display: none;
+    }
+    @media #{$sm} {
+        display: inline-block;
+    }
+}
+.artza-our-work-fillter-btn {
+    display: flex;
+    justify-content: end;
+    @media #{$md,$xs} {
+        display: block;
+    }
+    .filter-tabs {
+        display: inline-block;
+        overflow: hidden;
+        margin-top: 25px;
+        margin-bottom: 50px;
+        @media #{$md,$xs} {
+            margin-top: 0px;
+        }
+        .filter {
+            position: relative;
+            color: var(--font-color-2);
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: 400;
+            padding: 15px 35px;
+            text-transform: capitalize;
+            display: inline-block;
+            line-height: 1;
+            @include transition(.3s);
+            &:not(:last-child) {
+                border-right: 1px solid rgba(0, 0, 0, 0.20);
+            }
+            &:not(:first-child) {
+                margin-left: -4px;
+            }
+
+            @media #{$lg} {
+                padding: 15px 20px;
+            }
+            @media #{$xs} {
+                padding: 10px 14px;
+                font-size: 16px;
+            }
+            @media #{$sm} {
+                padding: 15px 35px;
+                font-size: 18px;
+            }
+            &:hover {
+                background-color: var(--pr-1);
+                color: var(--white-color);
+            }
+            &:is(.active) {
+                background-color: var(--pr-1);
+                color: var(--white-color);
+            }
+        }
+    }
+}
+.our_work_sortable_masonry {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.artza-our-work-item {
+    position: relative;
+    float: left;
+    margin-bottom: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
+    .inner-box {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 265px;
+        @media #{$xs} {
+            height: auto;
+        }
+        @media #{$sm} {
+            height: 265px;
+        }
+        .image-box {
+            position: relative;
+            display: block;
+            margin-bottom: 0px;
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 100%;
+                background-color: #000000;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                @include transition(.3s);
+            }
+            a {
+                font-size: 24px;
+                text-transform: capitalize;
+                font-weight: 700;
+                line-height: 29px;
+                color: var(--white-color);
+                position: absolute;
+                left: -100px;
+                bottom: 40px;
+                display: inline-block;
+                z-index: 1;
+                font-family: $inter;
+                visibility: hidden;
+                i {
+                    display: inline-block;
+                    margin-right: 11px;
+                }
+                &:hover {
+                    color: var(--pr-1);
+                }
+            }
+            
+        }
+        &:hover {
+            .image-box {
+                &::after {
+                    opacity: .8;
+                }
+                a {
+                    left: 30px;
+                    bottom: 40px;
+                    visibility: visible;
+                }
+            }
+        }
+    }
+}

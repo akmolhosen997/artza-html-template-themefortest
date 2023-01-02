@@ -1,0 +1,633 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/common' as *;
+
+/*
+************
+*************************
+08. testimonial
+******************************************************* 
+*************************************************************** */
+
+// ---------- textimonial --------------
+
+.artza-testimonial-area {
+    position: relative;
+}
+.artza-testimonial-bg-shape-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    img.shape-1 {
+        position: absolute;
+        left: 330px;
+        top: 80px;
+
+        @media #{$xxxl} {
+            left: 180px;
+        }
+        @media #{$xxl} {
+            left: 85px;
+        }
+        @media #{$xl,$lg,$md,$xs} {
+            left: 10px;
+        }
+    }
+    img.shape-2 {
+        position: absolute;
+        right: 375px;
+        top: 70px;
+
+        @media #{$xxxl} {
+            right: 180px;
+        }
+        @media #{$xxl} {
+            right: 85px;
+        }
+        @media #{$xl,$lg,$md,$xs} {
+            right: 10px;
+            top: 40px;
+        }
+    }
+    img.shape-3 {
+        bottom: 0;
+        right: 330px;
+        position: absolute;
+
+        @media #{$xxxl} {
+            right: 180px;
+        }
+        @media #{$xxl} {
+            right: 85px;
+        }
+        @media #{$xl,$lg,$md,$xs} {
+            right: 10px;
+            bottom: 0;
+        }
+    }
+}
+.artza-testimonial-box {
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+    padding: 0px 30px;
+    padding-bottom: 27px;
+    margin-bottom: 30px;
+
+    @media #{$md,$xs} {
+        margin-bottom: 80px;
+    }
+    &:hover {
+        .artza-testimonial-box-img {
+            a {
+                border-color: var(--pr-1);
+            }
+        }
+    }
+}
+.artza-testimonial-box-img {
+    margin-bottom: 21px;
+    margin-top: -55px;
+    a {
+        display: inline-block;
+        width: 89px;
+        height: 89px;
+        border-radius: 50%;
+        border: 5px solid #000;
+        overflow: hidden;
+    }
+}
+.artza-testimonial-box-text {
+    a {
+        display: inline-block;
+        font-size: 23px;
+        font-weight: 600;
+        text-transform: capitalize;
+        color: var(--font-color-1);
+        margin-bottom: 5px;
+
+        &:hover {
+            color: var(--pr-1);
+        }
+    }
+    span {
+        font-size: 19px;
+        display: block;
+        text-transform: capitalize;
+        font-weight: 400;
+        font-family: $poppins;
+        color: var(--font-color-2);
+        margin-bottom: 11px;
+    }
+    p {
+        margin-bottom: 22px;
+    }
+    i {
+        display: inline-block;
+        font-size: 40px;
+        color: #3498DB;
+        
+    }
+}
+.artza-testimonial-btn {
+    &:is(.mt-20) {
+        @media #{$md,$xs} {
+            margin-top: -30px;
+        }
+    }
+}
+
+// ------------------- testimonial-2 --------------------
+
+.artza-testimonial-2-left {
+    position: relative;
+    margin-right: 40px;
+    @media #{$xs} {
+        margin-right: 0;
+    }
+    @media #{$sm} {
+        margin-right: 40px;
+    }
+}
+.artza-testimonial-2-quote {
+    background-color: var(--white-color);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    z-index: 3;
+    transform: translate(0%, -50%);
+    @media #{$xs} {
+        top: unset;
+        bottom: 0;
+        right: 0;
+        transform: translate(0%, 0%);
+    }
+    @media #{$sm} {
+        top: 50%;
+        bottom: unset;
+        right: -50px;
+        transform: translate(0%, -50%);
+    }
+
+    i {
+        font-size: 24px;
+        display: inline-block;
+        line-height: 100px;
+        color: #000;
+    }
+}
+.artza-testimonial-2-slide-img {
+    width: 100%;
+    height: 429px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.artza-testimonial-2-title-wrapper {
+    p {
+        br {
+            @media #{$lg,$md,$xs} {
+                display: none;
+            }
+        }
+    }
+}
+.artza-testimonial-2-right {
+    margin-left: 50px;
+    margin-top: 8px;
+
+    @media #{$md,$xs} {
+        margin-top: 50px;
+        margin-left: 0;
+    }
+}
+.artza-testimonial-2-person {
+    a {
+        font-weight: 600;
+        font-size: 24px;
+        display: inline-block;
+        color: var(--font-color-3);
+        text-transform: capitalize;
+        &:hover {
+            color: var(--pr-2);
+        }
+    }
+    span {
+        color: var(--font-color-3);
+        font-weight: 300;
+        font-size: 16px;
+        display: block;
+        text-transform: capitalize;
+    }
+}
+
+.artza-testimonial-slide-btn-wrapper {
+    display: inline-block;
+    position: relative;
+    padding: 0 40px;
+    margin-top: 40px;
+    .artza_testimonial_2_progation  {
+        span {
+            background-color: #93A1C2;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            margin: 0px 5px !important;
+            border: 6px solid transparent;
+            outline: 2px solid transparent;
+            cursor: pointer;
+              &.swiper-pagination-bullet-active {
+                    border: 6px solid var(--white-color);
+                    outline: 2px solid var(--pr-2);
+                    background-color:var(--pr-2);
+              }
+        }
+    }
+    .artza_testimonial_2_slide_next {
+        position: absolute;
+        right: 0;
+        top: 0;
+        i {
+            display: inline-block;
+            cursor: pointer;
+            line-height: 1;
+            color: #808080;
+            font-size: 24px;
+            @include transition(.3s);
+
+            &:hover {
+                color: var(--pr-2);
+            }
+        }
+    }
+    .artza_testimonial_2_slide_prev {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        i {
+            display: inline-block;
+            cursor: pointer;
+            line-height: 1;
+            color: #808080;
+            font-size: 24px;
+            @include transition(.3s);
+
+            &:hover {
+                color: var(--pr-2);
+            }
+        }
+    }
+}
+
+// ------------------ testimonial-3 ----------------------
+
+.artza-testimonial-3-title-wrapper {
+    .artza-section-subtitle-2 {
+        @media #{$xs} {
+            font-size: 16px;
+        }
+        @media #{$sm} {
+            font-size: 20px;
+        }
+    }
+}
+.artza-testimonial-3-wrapper {
+    position: relative;
+    .testimonial-3-bg-shape-2 {
+        position: absolute;
+        left: -30px;
+        top: 25%;
+        transform: translate(0%, -50%);
+        @media #{$lg} {
+            left: 0px;
+        }
+        @media #{$md,$xs} {
+            display: none;
+        }
+    }
+    .testimonial-3-bg-shape-1 {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 0%);
+        @media #{$xs} {
+            display: none;
+        }
+        @media #{$sm} {
+            display: inline-block;
+        }
+    }
+    img.testimonial-3-bg-shape-4 {
+        position: absolute;
+        right: -140px;
+        top: 25%;
+        transform: translate(0%, -50%);
+        @media #{$xxl} {
+            right: -100px;
+        }
+        @media #{$xl} {
+            right: -10px;
+        }
+        @media #{$lg,$md,$xs} {
+            display: none;
+        }
+    }
+    .testimonial-3-bg-shape-3 {
+        position: absolute;
+        top: -70px;
+        left: 150px;
+    }
+}
+.artza-testimonial-3-item {
+    position: relative;
+}
+.testimonial-quote-1 {
+    font-size: 55px;
+    color: var(--sd-1);
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+
+    @media #{$xs} {
+        top: 10%;
+    }
+    @media #{$sm} {
+        top: 50%;
+    }
+}
+.testimonial-quote-2 {
+    font-size: 55px;
+    color: var(--sd-1);
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+    @media #{$xs} {
+        top: 10%;
+    }
+    @media #{$sm} {
+        top: 50%;
+    }
+}
+.artza-testimonial-3-item-img {
+    width: 95px;
+    height: 95px;
+    margin: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 22px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.artza-testimonial-3-item-text {
+    a {
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--font-color-3);
+        text-transform: capitalize;
+        margin-bottom: 5px;
+        &:hover {
+            color: var(--pr-2);
+        }
+    }
+    span {
+        color: var(--font-color-3);
+        display: block;
+        font-size: 16px;
+        font-weight: 300;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+    }
+    p {
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--font-color-3);
+    }
+}
+
+.artza-testimonial-3-slide-btn-wrapper {
+    display: inline-block;
+    position: relative;
+    padding: 0 40px;
+    margin-top: 30px;
+    .artza_testimonial_3_progation  {
+        span {
+            background-color: #93A1C2;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            margin: 0px 5px !important;
+            border: 6px solid transparent;
+            outline: 2px solid transparent;
+            cursor: pointer;
+              &.swiper-pagination-bullet-active {
+                    border: 6px solid var(--white-color);
+                    outline: 2px solid var(--pr-2);
+                    background-color:var(--pr-2);
+              }
+        }
+    }
+    .artza_testimonial_3_slide_next {
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        i {
+            display: inline-block;
+            cursor: pointer;
+            line-height: 1;
+            color: #808080;
+            font-size: 24px;
+            @include transition(.3s);
+
+            &:hover {
+                color: var(--pr-2);
+            }
+        }
+    }
+    .artza_testimonial_3_slide_prev {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        i {
+            display: inline-block;
+            cursor: pointer;
+            line-height: 1;
+            color: #808080;
+            font-size: 24px;
+            @include transition(.3s);
+
+            &:hover {
+                color: var(--pr-2);
+            }
+        }
+    }
+}
+
+// -------------------- testimonial-4 --------------------
+
+.artza-testimonial-4-area {
+    position: relative;
+    .testimonial-4-shape-1 {
+        position: absolute;
+        left: 340px;
+        top: 80px;
+        @media #{$xxxl} {
+            left: 200px;
+        }
+        @media #{$xxl} {
+            left: 100px;
+        }
+        @media #{$xl,$lg,$md,$xs} {
+            left: 0px;
+        }
+    }
+    .testimonial-4-shape-2 {
+        position: absolute;
+        right: 340px;
+        top: 80px;
+        @media #{$xxxl} {
+            right: 200px;
+        }
+        @media #{$xxl} {
+            right: 100px;
+        }
+        @media #{$xl,$lg,$md,$xs} {
+            right: 0px;
+        }
+    }
+}
+.artza-testimonial-4-item {
+    text-align: center;
+    padding: 40px 30px;
+    background-color: var(--white-color);
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.06);
+    margin-bottom: 30px;
+    @media #{$lg} {
+        padding: 30px 20px;
+    }
+    @media #{$xs} {
+        padding: 30px 20px;
+    }
+    @media #{$sm} {
+        padding: 30px 30px;
+    }
+    p {
+        font-size: 16px;
+        font-weight: 300;
+        color: var(--font-color-3);
+        text-align: left;
+        margin-bottom: 24px;
+    }
+    i {
+        display: inline-block;
+        width: 63px;
+        height: 63px;
+        border-radius: 50%;
+        background-color: #F1F1FC;
+        text-align: center;
+        line-height: 63px;
+        font-size: 20px;
+        color: var(--sd-1);
+    }
+}
+.testimonial-4-item-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+    .testimonial-4-item-img {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        margin-right: 28px;
+        flex: 0 0 100px;
+        @media #{$lg} {
+            margin-right: 10px;
+            flex: 0 0 80px;
+        }
+        @media #{$md} {
+            margin-right: 18px;
+            flex: 0 0 80px;
+
+        }
+        @media #{$xs} {
+            margin-right: 10px;
+            flex: 0 0 80px;
+        }
+        @media #{$sm} {
+            margin-right: 28px;
+            flex: 0 0 100px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .testimonial-4-item-title {
+        display: inline-block;
+        text-align: left;
+        a {
+            display: inline-block;
+            color: var(--font-color-3);
+            font-size: 19px;
+            font-weight: 600;
+            text-transform: capitalize;
+            line-height: 1;
+            margin-bottom: 10px;
+            text-align: left;
+            @media #{$lg} {
+                font-size: 18px;
+            }
+            @media #{$xs} {
+                font-size: 18px;
+            }
+            @media #{$sm} {
+                font-size: 20px;
+            }
+            &:hover {
+                color: var(--sd-2);
+            }
+        }
+        span {
+            display: block;
+            font-weight: 300;
+            font-size: 18px;
+            color: var(--font-color-3);
+            line-height: 1;
+            text-transform: capitalize;
+            text-align: left;
+            @media #{$lg,$md} {
+                font-size: 16px;
+            }
+            @media #{$xs} {
+                font-size: 16px;
+            }
+            @media #{$sm} {
+                font-size: 18px;
+            }
+        }
+    }
+    
+}

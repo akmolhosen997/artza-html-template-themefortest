@@ -1,0 +1,311 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/common' as *;
+
+/*
+************
+*************************
+19. footer
+******************************************************* 
+*************************************************************** */
+
+// ---------- footer --------------
+
+.artza-footer-widget-title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: .2px;
+    color: var(--white-color);
+    margin-bottom: 28px;
+}
+.footer-widget {
+    margin-bottom: 45px;
+}
+.artza-footer-link {
+    ul {
+        list-style: none;
+        li {
+            a {
+                display: inline-block;
+                color: var(--white-color);
+                font-size: 16px;
+                font-weight: 500;
+                letter-spacing: .2px;
+                text-transform: uppercase;
+                padding: 9px 0;
+                &:hover {
+                    color: var(--sd-1);
+                }
+            }
+        }
+    }
+}
+.artza-foooter-logo {
+    a {
+        display: inline-block;
+        margin-bottom: 18px;
+    }
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: var(--white-color);
+        br {
+            @media #{$md} {
+                display: none;
+            }
+        }
+    }
+}
+.artza-footer-link {
+    margin-left: 55px;
+    @media #{$lg} {
+        margin-left: 30px;
+    }
+    @media #{$xs} {
+        margin-left: 0px;
+    }
+}
+.artza-footer-input {
+    padding-left: 55px;
+    @media #{$lg} {
+        padding-left: 30px;
+    }
+    @media #{$md} {
+        padding-right: 55px;
+    }
+    @media #{$xs} {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+.artza-footer-form {
+    position: relative;
+    input {
+        width: 100%;
+        border-bottom: 1px solid #262626;
+        background: transparent;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        color: var(--white-color);
+        font-size: 12px;
+        letter-spacing: .2px;
+        text-transform: capitalize;
+        padding: 8px 0;
+        padding-right: 40px;
+        &::placeholder {
+            font-weight: 300;
+            color: var(--white-color);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: .2px;
+        }
+    }
+    a {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 2px;
+        padding-left: 15px;
+        &:hover {
+            rotate: -30deg;
+        }
+    }
+}
+.artza-footer-bottom {
+    padding: 40px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.artza-footer-copyright {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .2px;
+    text-align: center;
+    color: var(--white-color);
+    text-transform: capitalize;
+    a {
+        display: inline-block;
+        color: var(--pr-1);
+        text-transform: uppercase;
+    }
+}
+
+// ------------------------- footer-2 --------------------
+
+.artza-footer-contact {
+    h1 {
+        font-size: 40px;
+        color: var(--white-color);
+        line-height: 1;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+    }
+    span {
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 400;
+        color: var(--white-color);
+        text-transform: capitalize;
+        margin-bottom: 14px;
+    }
+    p {
+        font-size: 20px;
+        font-weight: 300;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+        color: var(--white-color);
+    }
+}
+.artza-footer-widget-title-2 {
+    font-size: 24px;
+    display: inline-block;
+    font-weight: 700;
+    color: var(--white-color);
+    text-transform: capitalize;
+    position: relative;
+    @media #{$lg} {
+        font-size: 22px;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        background-color: var(--white-color);
+    }
+}
+.footer-link-2 {
+    ul {
+        list-style: none;
+        li {
+            a {
+                font-size: 16px;
+                font-weight: 400;
+                display: inline-block;
+                color: var(--white-color);
+                text-transform: capitalize;
+                padding: 12px 0;
+                &:hover {
+                    color: var(--pr-2);
+                }
+            }
+        }
+    }
+}
+.artza-footer-2-social-link {
+    margin-bottom: 15px;
+    a {
+        display: inline-block;
+        font-size: 18px;
+        color: var(--white-color);
+        padding: 0 8px;
+        &:hover {
+            color: var(--pr-2);
+        }
+    }
+}
+.artza-footer-2-bottom {
+    padding: 36px 0;
+    border-top: 1px solid #333333;
+    .artza-footer-2-copyright {
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: capitalize;
+        color: var(--white-color);
+        margin: 0;
+
+        a {
+            display: inline-block;
+            text-transform: uppercase;
+            color: var(--pr-2);
+            &:hover {
+                color: var(--pr-1);
+            }
+        }
+    }
+}
+
+// --------------------- footer-4 -------------------------
+
+.footer-widget-4 {
+    .artza-footer-widget-title {
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+    .artza-footer-link {
+        margin: 0;
+        ul {
+            li {
+                a {
+                    font-weight: 300;
+                    text-transform: capitalize;
+                    &:hover {
+                        color: var(--sd-2);
+                    }
+                }
+            }
+        }
+    }
+    .footer-social-link {
+        a {
+            display: inline-block;
+            font-size: 24px;
+            color: var(--white-color);
+            line-height: 1;
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+
+            &:hover {
+                color: var(--sd-2);
+            }
+        }
+    }
+    .artza-footer-contact-4 {
+        ul {
+            li {
+                display: inline-block;
+                font-size: 16px;
+                font-weight: 300;
+                text-transform: capitalize;
+                color: var(--white-color);
+                padding: 10px 0;
+                i {
+                    display: inline-block;
+                    font-size: 20px;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    .artza-foooter-logo {
+        p {
+            text-transform: capitalize;
+            margin-bottom: 20px;
+            br {
+                @media #{$lg} {
+                    display: none;
+                }
+                @media #{$md} {
+                    display: block;
+                }
+                @media #{$xs} {
+                    display: none;
+                }
+                @media #{$sm} {
+                    display: block;
+                }
+            }
+        }
+    }
+
+}
+.footer-bottom-4 {
+    padding: 20px 0;
+}

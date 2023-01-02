@@ -1,0 +1,144 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/common' as *;
+
+/*
+************
+*************************
+17. faqs
+******************************************************* 
+*************************************************************** */
+
+// ---------- faqs --------------
+
+.artza-faqs-title {
+    p {
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--font-color-3);
+        opacity: .8;
+
+        br {
+            @media #{$xs} {
+                display: none;
+            }
+        }
+    }
+}
+.artza-accordion-item-left.pr-35 {
+    &:is(.pr-35) {
+        @media #{$md,$xs} {
+            padding-right: 0;
+        }
+    }
+    
+}
+.artza-faqs-accordion {
+    .accordion-item {
+        background-color: rgba(217, 217, 217, 0.10);
+        border: none;
+        .accordion-header {
+            .accordion-button {
+                background-color: rgba(217, 217, 217, 0.10);
+                font-size: 18px;
+                font-weight: 600;
+                text-transform: capitalize;
+                color: var(--font-color-3);
+                border: none;
+                outline: none;
+                padding: 27px 30px;
+                line-height: 27px;
+                &:hover {
+                    color: var(--pr-2);
+                }
+                &:not(.collapsed) {
+                    color: var(--pr-2);
+                    background: transparent;
+                    box-shadow: none;
+                    border: none;
+                    outline: none;
+                }
+                &::after {
+                    margin-top: -5px;
+                    flex-shrink: unset;
+                    margin-left: auto;
+                    content: "\f067";
+                    font-family: "font awesome 5 pro";
+                    background-image: unset;
+                    transition: transform .2s ease-in-out;
+                }
+                &:not(.collapsed)::after {
+                    background-image: unset;
+                    content: "\f068";
+                    transform: unset;
+                }
+            }
+            
+        }
+        .accordion-collapse {
+            .accordion-body {
+                padding: 0 30px;
+                margin-top: -15px;
+                p {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: var(--font-color-3);
+                    opacity: .8;
+                    margin: 0;
+                    padding-bottom: 25px;
+                }
+            }
+        }
+    }
+}
+.artza-faqs-contact {
+    background-color: rgba(217, 217, 217, 0.10);
+    padding: 30px 0;
+}
+.faqs-border-right {
+    border-right: 1px solid rgba(39, 67, 133, 0.08);
+    @media #{$xs} {
+        border: none;
+        margin-bottom: 30px;
+
+    }
+}
+.artza-faqs-contact-link{
+    display: flex;
+    padding: 0px 30px;
+    @media #{$lg} {
+        padding: 0px 20px;
+    }
+    .icon {
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        flex: 0 0 45px;
+        margin-right: 25px;
+        @media #{$lg} {
+            height: 30px;
+            flex: 0 0 20px;
+            margin-right: 10px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .text {
+        h6 {
+            font-size: 19px;
+            font-weight: 600;
+            text-transform: capitalize;
+            color: var(--pr-2);
+            margin-bottom: 5px;
+        }
+        span {
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--font-color-3);
+            opacity: .6;
+        }
+    }
+}

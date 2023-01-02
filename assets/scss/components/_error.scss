@@ -1,0 +1,50 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/common' as *;
+
+/*
+************
+*************************
+18. error
+******************************************************* 
+*************************************************************** */
+
+// ---------- error --------------
+
+.artza-error-content {
+    h1 {
+        font-size: 160px;
+        font-weight: 800;
+        color: var(--pr-2);
+        margin-bottom: 10px;
+        @media #{$xs} {
+            font-size: 90px;
+        }
+        @media #{$sm} {
+            font-size: 140px;
+        }
+        span {
+            color: #CB2959;
+        }
+    }
+    h3 {
+        font-size: 32px;
+        font-weight: 500;
+        color: var(--pr-2);
+        margin-bottom: 41px;
+        @media #{$xs} {
+            font-size: 22px;
+        }
+        @media #{$sm} {
+            font-size: 32px;
+        }
+        br {
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+    }
+    .artza-btn-4 {
+        text-transform: uppercase;
+    }
+}

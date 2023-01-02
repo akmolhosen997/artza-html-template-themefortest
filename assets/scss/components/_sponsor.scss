@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/common' as *;
+
+/*
+************
+*************************
+12. sponsor
+******************************************************* 
+*************************************************************** */
+
+// ---------- sponsor --------------
+.artza-sponsor-area {
+    background-color: #F7FCFF;
+}
+.artza-sponsor-box {
+    a {
+        display: block;
+        text-align: center;
+    }
+}

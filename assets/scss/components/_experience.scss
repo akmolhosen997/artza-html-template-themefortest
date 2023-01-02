@@ -1,0 +1,246 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/common' as *;
+
+/*
+************
+*************************
+15. experience
+******************************************************* 
+*************************************************************** */
+
+// ---------- experience --------------
+
+.artza-experience-area {
+    background-color: #E9ECF3;
+}
+.artza-experience-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    img {
+        margin-right: 14px;
+    }
+    h2 {
+        font-size: 48px;
+        font-weight: 700;
+        display: inline-block;
+        margin: 0;
+        color: var(--pr-2);
+        margin-right: 12px;
+        @media #{$lg} {
+            font-size: 40px;
+        }
+        @media #{$md} {
+            font-size: 45px;
+        }
+        @media #{$xs} {
+            font-size: 30px;
+        }
+        @media #{$sm} {
+            font-size: 45px;
+        }
+    }
+    p {
+        font-size: 19px;
+        font-weight: 500;
+        text-transform: capitalize;
+        margin: 0;
+        color: var(--font-color-3);
+        @media #{$lg} {
+            font-size: 16px;
+        }
+        @media #{$xs} {
+            font-size: 16px;
+        }
+        @media #{$sm} {
+            font-size: 20px;
+        }
+    }
+}
+
+// ---------------- experience-3 ------------------
+
+.position-sm-none {
+    @media #{$xs} {
+        position: unset !important;
+    }
+}
+.artza-experience-3-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @media #{$xs} {
+        flex-wrap: wrap;
+    }
+}
+.artza-experience-3-item {
+    display: inline-block;
+    width: 289px;
+    text-align: center;
+    position: relative;
+
+    @media #{$xs} {
+        width: 100%;
+    }
+    @media #{$sm} {
+        width: 255px;
+    }
+    &:not(:last-child) {
+        &::after {
+            position: absolute;
+            content: "";
+            width: 1px;
+            height: 90px;
+            background-color: #C5C6C8;
+            top: 50%;
+            right: 0;
+            transform: translate(0%, -50%);
+            @media #{$xs} {
+                display: none;
+            }
+            @media #{$sm} {
+                display: block;
+            }
+        }
+    }
+    &:nth-child(2)::after {
+        @media #{$sm} {
+            display: none;
+        }
+    }
+    h2 {
+        font-weight: 700;
+        font-size: 48px;
+        color: var(--pr-2);
+        line-height: 1;
+        margin-bottom: 9px;
+        span {
+            line-height: 1;
+            display: inline-block;
+        }
+        @media #{$md} {
+            font-size: 40px;
+        }
+    }
+    p {
+        margin: 0;
+        font-weight: 500;
+        font-size: 20px;
+        color: var(--font-color-3);
+        text-transform: capitalize;
+        @media #{$md} {
+            font-size: 16px;
+        }
+    }
+}
+
+// -------------------- experience-4 --------------------------
+
+.artza-experience-4-wrapper {
+    display: flex;
+    justify-content: space-between;
+    @media #{$md,$xs} {
+        flex-wrap: wrap;
+    }
+}
+.artza-experience-4-item {
+    display: inline-block;
+    width: 289px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 30px;
+
+    @media #{$md} {
+        width: 50%;
+    }
+    @media #{$xs} {
+        width: 100%;
+    }
+    @media #{$sm} {
+        width: 50%;
+    }
+    h2 {
+        font-weight: 700;
+        font-size: 42px;
+        color: var(--pr-2);
+        line-height: 1;
+        margin-bottom: 9px;
+        @media #{$md} {
+            font-size: 35px;
+        }
+        span {
+            line-height: 1;
+            display: inline-block;
+            }
+    }
+    p {
+        margin: 0;
+        font-weight: 500;
+        font-size: 19px;
+        color: var(--font-color-3);
+        text-transform: capitalize;
+        @media #{$md} {
+            font-size: 16px;
+        }
+    }
+    &:not(:last-child)::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 90px;
+    background-color: #C5C6C8;
+    top: 50%;
+    right: 0;
+    transform: translate(0%, -50%);
+
+        @media #{$xs} {
+            display: none;
+        }
+        @media #{$sm} {
+            display: block;
+        }
+    }
+    &:not(:last-child)::before {
+        position: absolute;
+        content: "";
+        width: 12px;
+        height: 12px;
+        background-color: var(--sd-2);
+        border-radius: 50%;
+        border: 2px solid var(--white-color);
+        top: 20%;
+        right: -6px;
+        transform: translate(0%, -50%);
+        z-index: 1;
+        animation: experience-4 5s linear infinite;
+        @media #{$xs} {
+            display: none;
+        }
+        @media #{$sm} {
+            display: block;
+        }
+    }
+    &:nth-child(2)::before {
+        animation-delay: 3s;
+        @media #{$md,$xs} {
+            display: none;
+        }
+    }
+    &:nth-child(2)::after {
+        @media #{$md,$xs} {
+            display: none;
+        }
+    }
+}
+@keyframes experience-4 {
+    0% {
+        top: 20%;
+    }
+    50%{
+        top: 80%;
+    }
+    100% {
+        top: 20%;
+    }
+}
